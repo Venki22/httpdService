@@ -10,7 +10,7 @@
       update_cache: yes
   - name: copying index file to managed nodes
     copy:
-      name: copy index file to documentroot
+      #name: copy index file to documentroot
       src: /var/lib/jenkins/workspace/Ansible-integration/index.html
       dest: /var/www/html/index.html
   - name: Start service
