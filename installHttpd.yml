@@ -8,13 +8,13 @@
       name: httpd
       state: latest
       update_cache: yes
-  - name: copy index file
+  - name: copying index file to managed nodes
     copy:
       name: copy index file to documentroot
-      src: ./index.html
+      src: /var/lib/jenkins/workspace/Ansible-integration/index.html
       dest: /var/www/html/index.html
   - name: Start service
     service:
       name: httpd
-      state: restarted
+      state: started
 ...
